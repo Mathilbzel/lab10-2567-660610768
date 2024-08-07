@@ -5,7 +5,7 @@ import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import UserCardDetail from "./UserCardDetail";
 import { UserCardProps } from "@/libs/types";
 
-export default function UserCard({ name, imgUrl, address, email } : UserCardProps){
+export default function UserCard({ name, imgUrl, address, email }:UserCardProps) {
   const [isDetailShown, setIsDetailShown] = useState(false);
 
   const userCardOnClick = () => {
@@ -22,7 +22,7 @@ export default function UserCard({ name, imgUrl, address, email } : UserCardProp
         {isDetailShown ? <IconChevronUp /> : <IconChevronDown />}
       </div>
       {/* display UserCardDetail accordingly */}
-      {isDetailShown && <UserCardDetail email={email} address={address} />}
+      {isDetailShown && <UserCardDetail email={email} address = {address} />}
     </div>
   );
 }
